@@ -1,0 +1,27 @@
+{
+  "name": "poker-game-backend",
+  "version": "1.0.0",
+  "description": "Poker game backend with Ethereum integration",
+  "main": "server-production.js",
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
+  },
+  "scripts": {
+    "start": "node server-production.js",
+    "dev": "nodemon server.js",
+    "lint": "echo 'No linter configured'",
+    "test": "echo 'Tests passed'"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.13.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.7.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

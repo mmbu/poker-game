@@ -1,0 +1,31 @@
+{
+  "name": "poker-game",
+  "version": "1.0.0",
+  "description": "Decentralized Poker Game with Ethereum Integration",
+  "workspaces": [
+    "backend",
+    "frontend",
+    "contracts"
+  ],
+  "scripts": {
+    "install-all": "npm install && npm run install-workspace",
+    "install-workspace": "npm --workspace=backend install && npm --workspace=frontend install && npm --workspace=contracts install",
+    "dev": "concurrently \"npm --workspace=backend start\" \"npm --workspace=frontend dev\" \"npm --workspace=contracts run hardhat node\"",
+    "dev-backend": "npm --workspace=backend start",
+    "dev-frontend": "npm --workspace=frontend dev",
+    "build": "npm --workspace=frontend build",
+    "test": "npm --workspace=contracts test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "keywords": [
+    "poker",
+    "ethereum",
+    "web3",
+    "blockchain",
+    "smart-contracts"
+  ],
+  "author": "Poker Game Team",
+  "license": "MIT"
+}
