@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useGameStore } from '../lib/gameStore';
 import WebSocketManager from '../lib/websocket';
 import { getLobbies } from '../lib/api';

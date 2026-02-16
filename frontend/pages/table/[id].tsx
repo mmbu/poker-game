@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useGameStore } from '../../lib/gameStore';
 import WebSocketManager from '../../lib/websocket';
@@ -26,7 +26,9 @@ export default function PokerTable() {
   const [betAmount, setBetAmount] = useState('10');
 
   useEffect(() => {
-    if (!tableId) return;
+    if (!tableId) {
+      return;
+    }
 
     const wsUrl = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8081';
     const wsManager = new WebSocketManager(wsUrl);
